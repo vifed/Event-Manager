@@ -11,8 +11,15 @@ app.get('/login', (req, res) => {
 });
 
 app.post('/login', function (req, res) {
-   if(data.length){
-       console.log(req.body.dati);
+   if(req.body){
+       var data = {
+           email: req.body.email,
+           password: req.body.password
+       };
+       console.log(data);
+   }
+   else {
+       console.log("none");
    }
 });
 

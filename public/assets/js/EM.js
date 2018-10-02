@@ -30,31 +30,29 @@ $(document).ready(function () {
             }
         },
         submitHandler: function(form) {
-            var dati = {
-                email: $("#inputmail").val(),
-                password: $("#inputpass").val()
-            };
-            $.ajax({
-                url: "/login",
-                type: "POST",
-                data: JSON.stringify(dati),
+            var em = $("#inputmail").val();
+            var ps = $("#inputpass").val();
+            var input = {email:em, password:ps};
+            const opzioni = {
+                url: '/login',
+                type: 'post',
+                data: input,
                 cache: false,
                 processData: false,
-            });
-            return false;
+            };
+
+            $(this).ajaxSubmit(opzioni);
+
+            // $.ajax({
+            //     url: "/login",
+            //     type: "POST",
+            //     data: input,
+            //     cache: false,
+            //     processData: false,
+            // });
+            // return false;
         }
     });
-    //
-    // $("#loginbtn").on('click', function (e) {
-    //     e.preventDefault();
-    //     var user = {
-    //         email: $("#inputmail").val(),
-    //         password: $("#inputpass").val()
-    //     };
-    //     $.post('/login', user, function (res) {
-    //         console.log("post done");
-    //     });
-    // })
 
 });
 
