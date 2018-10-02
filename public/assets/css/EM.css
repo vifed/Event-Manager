@@ -1,0 +1,20 @@
+
+body,html {
+    height: auto;
+    background-color: #34515e;
+    font-family: 'Cabin', sans-serif;
+}
+
+.container{
+    border-radius: 3%;
+}
+
+.jumbotron{
+    background-color: #59ABE3;
+}
+/*a{*/
+    /*background-color: #34515e;*/
+    /*padding: 3%;*/
+    /*border-radius: 5%;*/
+    /*color: #FFFFFF;*/
+/*}*/
