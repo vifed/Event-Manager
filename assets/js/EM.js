@@ -33,15 +33,16 @@ $(document).ready(function () {
             var em = $("#inputmail").val();
             var ps = $("#inputpass").val();
             var input = {email:em, password:ps};
+
             const opzioni = {
                 url: '/login',
-                type: 'post',
+                type: 'POST',
                 data: input,
                 cache: false,
                 processData: false,
             };
 
-            $(this).ajaxSubmit(opzioni);
+            $(form).ajaxSubmit(opzioni);
 
             // $.ajax({
             //     url: "/login",
